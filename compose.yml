@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  bot:
+    build: .
+    container_name: mokumoku_bot
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
